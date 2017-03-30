@@ -22,7 +22,7 @@ export const dimens = {
 
 export const icon = {
     logo: require('../../resource/ic_logo.png'),
-    // ic_time: require('../images/ic_time.png'),
+    ic_back: require('../../resource/ic_back_nav.png'),
     // ic_date: require('../images/ic_date.png'),
 };
 

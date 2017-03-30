@@ -12,12 +12,12 @@ import {
   View,
   Image
 } from 'react-native';
-import Login from './src/layout/Login';
+import Index from './src/index';
 export default class TwitterApp extends Component {
 
   render() {
     return (
-        <Login/>
+        <Index/>
     );
   }
 }
