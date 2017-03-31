@@ -1,12 +1,12 @@
 export const colors = {
-    dark_primary_color   : '#388E3C',
-    default_primary_color: '#4CAF50',
-    light_primary_color  : '#C8E6C9',
+    dark_primary_color   : '#233446',
+    default_primary_color: '#1b2936',
+    light_primary_color  : '#23a2e7',
     text_primary_color   : '#FFFFFF',
     accent_color         : '#4CAF50',
-    primary_text_color   : '#212121',
-    secondary_text_color : '#757575',
-    divider_color        : '#BDBDBD',
+    primary_text_color   : '#f3f5f2',
+    secondary_text_color : '#8797a4',
+    divider_color        : '#00020a',
 };
 
 
@@ -23,6 +23,15 @@ export const dimens = {
 export const icon = {
     logo: require('../../resource/ic_logo.png'),
     ic_back: require('../../resource/ic_back_nav.png'),
+
+    tab_home_selected: require('../../resource/home_select.png'),
+    tab_home_unselect: require('../../resource/home_unselect.png'),
+    tab_message_selected: require('../../resource/mess_select.png'),
+    tab_message_unselect: require('../../resource/mess_unselect.png'),
+    tab_noti_selected: require('../../resource/notifi_selected.png'),
+    tab_noti_unselect: require('../../resource/notifi_unselected.png'),
+    tab_profile_selected: require('../../resource/user_select.png'),
+    tab_profile_unselect: require('../../resource/user_unselect.png'),
     // ic_date: require('../images/ic_date.png'),
 };
 
