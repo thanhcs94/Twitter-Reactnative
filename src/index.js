@@ -12,7 +12,6 @@ import Login from './components/Login';
 import TabNewFeeds from './components/Tabbar/TabNewFeeds';
 import TabNotifications from './components/Tabbar/TabNotifications';
 import TabMessages from './components/Tabbar/TabMessages';
-import SideDrawer from './components/Drawer/SideDrawer';
 import ControlPanel from './components/Drawer/ControlPanel';
 import TabProfile from './components/Tabbar/TabProfile';
 import {colors} from './config/appConfig'
@@ -100,8 +99,7 @@ export default class Index extends Component {
           return 100
         }}
         panOpenMask={0.95}
-        negotiatePan
-        >
+        negotiatePan>
          <Router hideNavBar={true} 
         scenes={scenes}
         style = {styles.container}/>

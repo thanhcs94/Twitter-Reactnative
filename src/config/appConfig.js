@@ -16,7 +16,12 @@ export const dimens = {
     text_description:14,
     space_small : 4,
     space_normal : 8,
-    space_big: 32,
+    space_big : 16,
+    space_super_big: 32,
+
+    my_avatar:50, 
+    item_avatar:32,
+    cover_photo_height:160
 };
 
 
