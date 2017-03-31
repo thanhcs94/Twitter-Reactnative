@@ -12,6 +12,13 @@ import {colors} from './config/appConfig'
 import {icon} from './config/appConfig'
 import {Actions, Scene, Router} from 'react-native-router-flux';
 
+
+var navigationView = (
+    <View style={{flex: 1, backgroundColor: '#fff'}}>
+      <Text style={{margin: 10, fontSize: 15, textAlign: 'left'}}>I'm in the Drawer!</Text>
+    </View>
+  );
+  
 const scenes = Actions.create(
   <Scene key="root">
     <Scene 
