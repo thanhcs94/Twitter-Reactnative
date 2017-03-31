@@ -9,7 +9,6 @@ export const colors = {
     divider_color        : '#00020a',
 };
 
-
 export const dimens = {
     text_name_big: 20,
     text_title: 16,
