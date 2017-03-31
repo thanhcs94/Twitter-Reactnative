@@ -5,19 +5,22 @@ import {
   Text,
   View,
   Image,
-  TouchableOpacity
+  TouchableOpacity,
+  DrawerLayoutAndroid
 } from 'react-native';
 import Login from './components/Login';
 import TabNewFeeds from './components/Tabbar/TabNewFeeds';
 import TabNotifications from './components/Tabbar/TabNotifications';
 import TabMessages from './components/Tabbar/TabMessages';
+import SideDrawer from './components/Drawer/SideDrawer';
+import ControlPanel from './components/Drawer/ControlPanel';
 import TabProfile from './components/Tabbar/TabProfile';
 import {colors} from './config/appConfig'
 import {icon} from './config/appConfig'
 
 import Drawer from 'react-native-drawer'
+import {Actions,ActionConst, Scene, Router,Route, NavigationDrawer} from 'react-native-router-flux';
 
-import {Actions,ActionConst, Scene, Router, NavigationDrawer} from 'react-native-router-flux';
 
 
 class TabIcon extends React.Component {
@@ -47,6 +50,7 @@ class TabIcon extends React.Component {
 }
 
 const scenes = Actions.create(
+    
     <Scene key="root">
        <Scene key='tab' tabs={true} hideNavBar type={ActionConst.REPLACE}>
             <Scene key='tabFeeds' title='Home' component={TabNewFeeds} icon={TabIcon}></Scene>
@@ -58,20 +62,53 @@ const scenes = Actions.create(
   </Scene>
 );
 
+
 export default class Index extends Component {
 
+ state={
+    drawerOpen: false,
+    drawerDisabled: false,
+  };
 
-closeControlPanel = () => {
+ closeDrawer = () => {
     this._drawer.close()
   };
-  openControlPanel = () => {
+  openDrawer = () => {
     this._drawer.open()
   };
   
   render() {
-    return <Router hideNavBar={true} 
+    return <Drawer
+        ref={(ref) => this._drawer = ref}
+        type="static"
+        acceptDoubleTap
+        styles={{main: {shadowColor: '#000000', shadowOpacity: 0.3, shadowRadius: 15}}}
+        content={<ControlPanel closeDrawer={this.closeDrawer} />}
+         onOpen={() => {
+          console.log('onopen')
+          this.setState({drawerOpen: true})
+        }}
+        onClose={() => {
+          console.log('onclose')
+          this.setState({drawerOpen: false})
+        }}
+        captureGestures={false}
+        tweenDuration={100}
+        panThreshold={0.1}
+        disabled={this.state.drawerDisabled}
+        openDrawerOffset={(viewport) => {
+          return 100
+        }}
+        panOpenMask={0.95}
+        negotiatePan
+        >
+         <Router hideNavBar={true} 
         scenes={scenes}
         style = {styles.container}/>
+
+      </Drawer>
+
+       //this.openControlPanel();
   } 
 }
 const styles = StyleSheet.create({
