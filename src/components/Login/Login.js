@@ -9,7 +9,8 @@ import {
     Text,
     View,
     Image,
-    AsyncStorage
+    AsyncStorage, 
+    StatusBar
 } from 'react-native';
 
 export default class Login extends Component {
@@ -31,6 +32,7 @@ export default class Login extends Component {
     render() {
         return (
             <View style={styles.container}>
+                  <StatusBar barStyle = "light-content"/>
                 <View style = {styles.logoConten}>
                     <Image
                         style = {styles.logo}
