@@ -30,18 +30,24 @@ class LoginForm extends Component {
     _loginTwitter(){
         twitter(twitter_app).then((info) => {
             console.log("TwitterAcount : "+ JSON.stringify(info.user))
-            this._saveDataLogin(true, info.user.name);
+            this._saveDataLogin(1, JSON.stringify(info.user));
         }).catch((error) => {
             alert(JSON.stringify(error.code +" - "+ error.description))
-            this._saveDataLogin(false, "{}");
+           this._saveDataLogin(0, "");
         });
     }
 
-    _saveDataLogin(islogin, accountData){
-        console.log("Save Account Data : "+ JSON.stringify(accountData))
-        AsyncStorage.setIls
-        tem(dataKey.islogin, islogin);
-        //AsyncStorage.setItem(dataKey.accountData, accountData);
+    async _saveDataLogin(islogin, accountData){
+        try {
+            //await AsyncStorage.setItem(dataKey.islogin, islogin);
+            isin = islogin? '1':'0'
+            await AsyncStorage.setItem(dataKey.islogin, isin);
+             console.log("Save Account Data : "+islogin)
+            await AsyncStorage.setItem(dataKey.accountData, accountData);
+             console.log("Save Account Data : "+accountData)
+        }catch(error){
+
+        }
     }
     render() {
         return (
