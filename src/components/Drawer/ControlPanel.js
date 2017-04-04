@@ -49,21 +49,20 @@ export default class ControlPanel extends Component {
     );
   }
 
-
   render() {
     let {closeDrawer} = this.props
     return (
       <ScrollView style={styles.container}>
          <StatusBar barStyle = "light-content"/>
         <View style ={styles.profileHeader}>
-          <Image  style ={styles.coverImage}
-          source = {{uri:'https://scontent.fsgn2-2.fna.fbcdn.net/v/t31.0-8/17240409_272074939905160_4141327764769978811_o.jpg?oh=b9dbd313e2539c33efa6747cb6135d5a&oe=59928B2F'}} />
+           <Image  style ={styles.coverImage}
+          source = {{uri:'https://pbs.twimg.com/profile_banners/2785041523/1488964544'}} />
           <View  style ={styles.profilAvatar}>
             <Image style ={styles.avatarImage}
-            source = {{uri:'https://scontent.fsgn2-2.fna.fbcdn.net/v/t31.0-8/15304449_644480075724724_7008031781527667179_o.jpg?oh=79b0d15f36d2b2b5a26478ac0b9b7fc1&oe=59518C45'}}/>
+            source = {{uri:'https://pbs.twimg.com/profile_images/841892295972646912/_ePP0dKB_normal.jpg'}}/>
             <Text style ={styles.textBig}>Thanh Nguyen</Text>
             <Text style ={styles.textNormal}>@thanhcs94</Text>
-          </View>
+          </View> 
 
           {this._getMainMenuDrawer()}
           <View 

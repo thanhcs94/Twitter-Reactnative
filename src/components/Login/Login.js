@@ -14,21 +14,6 @@ import {
 } from 'react-native';
 
 export default class Login extends Component {
-
-
-    componentDidMount() {
-        if(AsyncStorage.getItem(dataKey.islogin)==true){
-            console.log("Login Login Roi")
-            AsyncStorage.getItem(dataKey.accountData).then((value) => {
-                console.log(JSON.stringify(value))
-            })
-                .then(res => {
-                    //do something else
-                });
-        }else{
-            console.log("Login Not yet Login")
-        }
-    }
     render() {
         return (
             <View style={styles.container}>
@@ -87,3 +72,5 @@ const styles = StyleSheet.create({
         marginBottom: 5,
     },
 });
+
+

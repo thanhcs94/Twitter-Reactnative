@@ -9,11 +9,11 @@ export const colors = {
     divider_color        : '#00020a',
 };
 
-
 export const dimens = {
     text_name_big: 20,
     text_title: 16,
     text_description:14,
+    text_description_small:13,
     space_small : 4,
     space_normal : 8,
     space_big : 16,
@@ -37,6 +37,11 @@ export const icon = {
     tab_noti_unselect: require('../../resource/notifi_unselected.png'),
     tab_profile_selected: require('../../resource/user_select.png'),
     tab_profile_unselect: require('../../resource/user_unselect.png'),
+
+    ic_forward: require('../../resource/ic_forwad.png'),
+    ic_loop: require('../../resource/ic_retweet.png'),
+    ic_heart: require('../../resource/ic_heart.png'),
+    ic_hearted: require('../../resource/ic_hearted.png'),
     // ic_date: require('../images/ic_date.png'),
 };
 
