@@ -22,7 +22,7 @@ import { twitter, uri } from 'react-native-simple-auth';
 import Drawer from 'react-native-drawer'
 import {Actions,ActionConst, Scene, Router,Route, NavigationDrawer} from 'react-native-router-flux';
 var ohauth = require('ohauth');
-var isLogin = '1';
+var isLogin = '0';
 var mainView ;
 class TabIcon extends React.Component {
     
@@ -67,7 +67,7 @@ export default class Index extends Component {
  state={
     drawerOpen: false,
     drawerDisabled: false,
-    isLogin : '1'
+    isLogin : '0'
   };
 
  closeDrawer = () => {
@@ -130,7 +130,7 @@ export default class Index extends Component {
             AsyncStorage.setItem(dataKey.token, info.credentials.oauth_token);
             AsyncStorage.setItem(dataKey.tokenSecret,info.credentials.oauth_token_secret);
             this.setState({
-                        isLogin:'1'
+                   isLogin:'1'
              })
         }catch(error){
               console.log('info error ======= ', error);
@@ -206,8 +206,7 @@ barButtonTextStyle={styles.barButtonTextStyle}
 barButtonIconStyle={styles.barButtonIconStyle}
  */
 
-
-/*{
+/*{ 
 "user" : -{
 "id" : 2785041523,
 "id_str" : 2785041523,
